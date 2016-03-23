@@ -1,0 +1,28 @@
+{
+  "name": "pagination-generator",
+  "version": "1.0.0",
+  "description": "pagination generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "keywords": [
+    "pagination",
+    "page"
+  ],
+  "author": "zbinlin",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbinlin/pagination-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zbinlin/pagination-generator/issues"
+  },
+  "homepage": "https://github.com/zbinlin/pagination-generator#readme"
+}
