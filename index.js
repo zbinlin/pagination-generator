@@ -39,7 +39,7 @@ module.exports = function pagination(current, total, limit) {
     let next = {
         type: "nav",
         name: "next",
-        value: Math.min(current, current + 1),
+        value: Math.min(current + 1, total),
         disabled: current === total,
     };
     if (limit < 3) {

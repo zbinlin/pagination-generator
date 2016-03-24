@@ -19,7 +19,7 @@ console.log(pagen(4, 1000, 9)); // current = 4, count = 1000, limit = 9;
   { type: 'num', name: 4, value: 4, current: true },
   { type: 'num', name: 5, value: 5, current: false },
   { type: 'num', name: 6, value: 6, current: false },
-  { type: 'nav', name: 'next', value: 4, disabled: false },
+  { type: 'nav', name: 'next', value: 5, disabled: false },
   { type: 'nav', name: 'last', value: 1000, disabled: false } ]
 */
 ```

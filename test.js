@@ -22,7 +22,7 @@ describe("test pagination function", function () {
         expect(pagination(1, 10, 2)[1]).to.be.eql({
             type: "nav",
             name: "next",
-            value: 1,
+            value: 2,
             disabled: false,
         });
         expect(pagination(3, 10, 2)[0]).to.be.eql({
@@ -61,27 +61,39 @@ describe("test pagination function", function () {
     });
     it("显示“首页”、“前一页”、“后一页”、“末页”以及剩余的数字项，如果需要显示的项多于 5 项", function () {
         const e1 = ["first", "prev", 1, 2, 3, 4, 5, "next", "last"];
+        const v1 = [1, 1, 1, 2, 3, 4, 5, 3, 10];
         expect(getNames(
             pagination(2, 10, 9)
         )).to.be.eql(e1);
+        expect(getValues(
+            pagination(2, 10, 9)
+        )).to.be.eql(v1);
 
         expect(getCurrentValue(
             pagination(2, 10, 9)
         )).to.be.equal(2);
 
         const e2 = ["first", "prev", 3, 4, 5, 6, 7, "next", "last"];
+        const v2 = [1, 4, 3, 4, 5, 6, 7, 6, 10];
         expect(getNames(
             pagination(5, 10, 9)
         )).to.be.eql(e2);
+        expect(getValues(
+            pagination(5, 10, 9)
+        )).to.be.eql(v2);
 
         expect(getCurrentValue(
             pagination(5, 10, 9)
         )).to.be.equal(5);
 
         const e3 = ["first", "prev", 6, 7, 8, 9, 10, "next", "last"];
+        const v3 = [1, 8, 6, 7, 8, 9, 10, 10, 10];
         expect(getNames(
             pagination(9, 10, 9)
         )).to.be.eql(e3);
+        expect(getValues(
+            pagination(9, 10, 9)
+        )).to.be.eql(v3);
 
         expect(getCurrentValue(
             pagination(9, 10, 9)
@@ -90,6 +102,9 @@ describe("test pagination function", function () {
 
     function getNames(ary) {
         return ary.map(item => item.name);
+    }
+    function getValues(ary) {
+        return ary.map(item => item.value);
     }
     function getCurrentValue(ary) {
         return ary.filter(item => item.current)[0].value;
