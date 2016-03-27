@@ -2,9 +2,11 @@
   "name": "pagination-generator",
   "version": "1.0.2",
   "description": "pagination generator",
-  "main": "index.js",
+  "main": "index.umd.js",
+  "jsnext:main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [
     "pagination",
@@ -13,8 +15,12 @@
   "author": "zbinlin",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-preset-es2015-rollup": "^1.1.1",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "rollup": "^0.25.6",
+    "rollup-plugin-babel": "^2.4.0"
   },
   "dependencies": {},
   "repository": {
