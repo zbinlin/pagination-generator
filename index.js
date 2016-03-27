@@ -18,25 +18,25 @@
  */
 module.exports = function pagination(current, total, limit) {
     current = Math.min(total, Math.max(1, current));
-    let first = {
+    var first = {
         type: "nav",
         name: "first",
         value: 1,
         disabled: current === 1,
     };
-    let last = {
+    var last = {
         type: "nav",
         name: "last",
         value: total,
         disabled: current === total,
     };
-    let prev = {
+    var prev = {
         type: "nav",
         name: "prev",
         value: Math.max(1, current - 1),
         disabled: current === 1,
     };
-    let next = {
+    var next = {
         type: "nav",
         name: "next",
         value: Math.min(current + 1, total),
@@ -54,13 +54,13 @@ module.exports = function pagination(current, total, limit) {
     } else if (limit < 5) {
         return [first, prev, next, last];
     }
-    let start = 1, end = total;
-    let before = [], after = [];
+    var start = 1, end = total;
+    var before = [], after = [];
     if (total > limit) {
         before = [first, prev];
         after = [next, last];
         limit -= 4;
-        let half = Math.floor(limit / 2);
+        var half = Math.floor(limit / 2);
         if (current <= half) {
             end = limit;
         } else if (current >= total - half) {
@@ -70,8 +70,8 @@ module.exports = function pagination(current, total, limit) {
             end = start + limit - 1;
         }
     }
-    let pages = [];
-    for (let i = start; i <= end; i++) {
+    var pages = [];
+    for (var i = start; i <= end; i++) {
         pages.push({
             type: "num",
             name: i,
