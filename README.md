@@ -1,5 +1,7 @@
 # pagination generator
 
+**[DEMO](https://live-demo.github.io/pagen/dist/index.html)**
+
 ## Install
 
 ```shell
