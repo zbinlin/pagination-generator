@@ -1,7 +1,7 @@
 "use strict";
 
 export default {
-    input: "./index.js",
+    input: "./index.mjs",
     output: {
         format: "umd",
         file: "./index.umd.js",

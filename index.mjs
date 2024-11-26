@@ -3,6 +3,7 @@
 export const PaginationItemTypes = (function (PaginationItemTypes) {
     PaginationItemTypes["Nav"] = "nav";
     PaginationItemTypes["Num"] = "num";
+    return PaginationItemTypes;
 })({});
 
 /**

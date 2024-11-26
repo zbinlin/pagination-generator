@@ -3,15 +3,15 @@
   "version": "1.0.7",
   "description": "pagination generator",
   "main": "index.umd.js",
-  "jsnext:main": "index.js",
+  "jsnext:main": "index.mjs",
   "scripts": {
-    "test": "mocha test.js",
-    "build": "rollup -c rollup.config.js"
+    "test": "mocha test.mjs",
+    "build": "rollup -c rollup.config.mjs"
   },
   "exports": {
     ".": {
-      "default": "./index.umd.js",
-      "import": "./index.js",
+      "require": "./index.umd.js",
+      "import": "./index.mjs",
       "types": "./index.d.ts"
     }
   },

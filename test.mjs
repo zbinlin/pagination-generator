@@ -1,8 +1,8 @@
 "use strict";
 /* eslint-env mocha */
 
-const expect = require("chai").expect;
-const pagination = require(".");
+import { expect } from "chai";
+import pagination from "pagination-generator";
 
 describe("test pagination function", function () {
     it("返回第 1 页，如果输入的页数少于第 1 页", function () {
