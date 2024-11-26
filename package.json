@@ -1,12 +1,19 @@
 {
   "name": "pagination-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "pagination generator",
   "main": "index.umd.js",
   "jsnext:main": "index.js",
   "scripts": {
     "test": "mocha test.js",
     "build": "rollup -c rollup.config.js"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.umd.js",
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
   },
   "keywords": [
     "pagination",
@@ -15,14 +22,10 @@
   "author": "zbinlin",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.7.4",
-    "babel-preset-es2015-rollup": "^1.1.1",
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
-    "rollup": "^0.25.6",
-    "rollup-plugin-babel": "^2.4.0"
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
+    "rollup": "^4.27.4"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zbinlin/pagination-generator.git"
@@ -30,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/zbinlin/pagination-generator/issues"
   },
-  "homepage": "https://github.com/zbinlin/pagination-generator#readme"
+  "homepage": "https://github.com/zbinlin/pagination-generator#readme",
+  "packageManager": "npm@10.9.0+sha512.65a9c38a8172948f617a53619762cd77e12b9950fe1f9239debcb8d62c652f2081824b986fee7c0af6c0a7df615becebe4bf56e17ec27214a87aa29d9e038b4b"
 }
