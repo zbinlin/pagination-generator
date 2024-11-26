@@ -1,6 +1,6 @@
 {
   "name": "pagination-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "pagination generator",
   "main": "index.umd.js",
   "jsnext:main": "index.js",
