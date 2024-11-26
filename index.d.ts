@@ -12,7 +12,7 @@ export type PaginationItem = {
     type: PaginationItemTypes.Num;
     name: `${number}`;
     value: number;
-    disabled: boolean;
+    current: boolean;
 }
 
 /**
