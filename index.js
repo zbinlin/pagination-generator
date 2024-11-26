@@ -1,5 +1,10 @@
 "use strict";
 
+export const PaginationItemTypes = (function (PaginationItemTypes) {
+    PaginationItemTypes["Nav"] = "nav";
+    PaginationItemTypes["Num"] = "num";
+})({});
+
 /**
  * @type PaginationItem
  * @param {Object} item

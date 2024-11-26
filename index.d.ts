@@ -1,4 +1,4 @@
-export enum PaginationItemTypes {
+export declare enum PaginationItemTypes {
     Nav = "nav",
     Num = "num",
 }

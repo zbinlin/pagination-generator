@@ -1,8 +1,13 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.paginationGenerate = factory());
-})(this, (function () { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.paginationGenerate = {}));
+})(this, (function (exports) { 'use strict';
+
+    const PaginationItemTypes = (function (PaginationItemTypes) {
+        PaginationItemTypes["Nav"] = "nav";
+        PaginationItemTypes["Num"] = "num";
+    })({});
 
     /**
      * @type PaginationItem
@@ -86,7 +91,10 @@
         return before.concat(pages, after);
     }
 
-    return paginationGenerator;
+    exports.PaginationItemTypes = PaginationItemTypes;
+    exports.default = paginationGenerator;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
 //# sourceMappingURL=index.umd.js.map
